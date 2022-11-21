@@ -12,6 +12,12 @@ Vue.config.productionTip = false
 
 Vue.use(VueAxios, axios)
 
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'Learning';
+  next();
+});
+
+
 new Vue({
   router,
   store,
