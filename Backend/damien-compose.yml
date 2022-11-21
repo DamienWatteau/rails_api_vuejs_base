@@ -3,6 +3,14 @@ version: '3.0'
 services:
   web:
     build: .
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_PORT: 5432
+      POSTGRES_HOST: 'db'
+      SERVEUR_HOST: 'localhost'
+      PASSWORD_RESET_URL: '/'
+      RAILS_ENV: 'development'
     ports:
       - 3000:3000
     volumes:
